@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="main.js"></script>
+    <title>Sort</title>
+</head>
+<body>
+    <div class="content">
+        <div class="search_block">
+            <input type="text" size="20" id="text_to_search">
+            
+            <button class="clear_Btn" onclick="clearSearchList()"><i class="fa fa-close"></i></button>
+            <button class="info_Btn" onclick="showInfo()"><i class="fa fa-info-circle"></i></button>
+            <div class="radio_Btns">
+                <input type="radio" class="checkbox_to_search" name="list_to_search" value="list1" id="list1">
+                <label for="list1">Поле 1</label>
+                <input type="radio" class="checkbox_to_search" name="list_to_search" value="list2" id="list2">
+                <label for="list2">Поле 2</label>
+                <input type="radio" class="checkbox_to_search" name="list_to_search" value="list3" id="list3">
+                <label for="list3">Поле 3</label>
+            </div>
+            <button class="search_Btn" onclick="searchList()"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="text_table">
+            <table>
+                <tr>
+                    <th> <button class="sort" onclick="sortColumn('list1')">Поле 1<i class="fa fa-sort"></i></button></th>
+                    <th> <button class="sort" onclick="sortColumn('list2')">Поле 2<i class="fa fa-sort"></i></button></th>
+                    <th> <button class="sort" onclick="sortColumn('list3')">Поле 3<i class="fa fa-sort"></i></button></th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>9</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>6</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>1</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>9</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>limp</td>
+                    <td>biz</td>
+                    <td>kit</td>
+                </tr>
+                <tr>
+                    <td>pa</td>
+                    <td>pa</td>
+                    <td>roach</td>
+                </tr>
+                <tr>
+                    <td>link</td>
+                    <td>in</td>
+                    <td>park</td>
+                </tr>
+                <tr>
+                    <td>p</td>
+                    <td>o</td>
+                    <td>d</td>
+                </tr>
+                <tr>
+                    <td>dis</td>
+                    <td>tur</td>
+                    <td>bed</td>
+                </tr>
+                <tr>
+                    <td>nick</td>
+                    <td>el</td>
+                    <td>back</td>
+                </tr>
+                <tr>
+                    <td>ac</td>
+                    <td>cdc</td>
+                    <td>dc</td>
+                </tr>
+                <tr>
+                    <td>bad</td>
+                    <td>wo</td>
+                    <td>lfes</td>
+                </tr>
+                <tr>
+                    <td>be</td>
+                    <td>atl</td>
+                    <td>s</td>
+                </tr>
+                <tr>
+                    <td>black</td>
+                    <td>sab</td>
+                    <td>bath</td>
+                </tr>
+                <tr>
+                    <td>oz</td>
+                    <td>zy</td>
+                    <td>oz</td>
+                </tr>
+                <tr>
+                    <td>break</td>
+                    <td>ing</td>
+                    <td>benj</td>
+                </tr>
+                <tr>
+                    <td>three</td>
+                    <td>days</td>
+                    <td>grace</td>
+                </tr>
+                <tr>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>sli</td>
+                    <td>pk</td>
+                    <td>not</td>
+                </tr>
+                <tr>
+                    <td>blue</td>
+                    <td>oc</td>
+                    <td>tober</td>
+                </tr>
+                <tr>
+                    <td>evan</td>
+                    <td>sce</td>
+                    <td>nce</td>
+                </tr>
+                <tr>
+                    <td>aven</td>
+                    <td>ged</td>
+                    <td>saven</td>
+                </tr>
+                <tr>
+                    <td>ski</td>
+                    <td>ll</td>
+                    <td>et</td>
+                </tr>
+                <tr>
+                    <td>system</td>
+                    <td>of a</td>
+                    <td>dows</td>
+                </tr>
+                <tr>
+                    <td>meta</td>
+                    <td>lli</td>
+                    <td>ca</td>
+                </tr>
+                <tr>
+                    <td>А</td>
+                    <td>2</td>
+                    <td>kla</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>3</td>
+                    <td>154ash</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>1wqat</td>
+                    <td>1211</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>16asd</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>116</td>
+                    <td>sb</td>
+                    <td>ssd62</td>
+                </tr>
+                <tr>
+                    <td>1 af</td>
+                    <td>bana</td>
+                    <td>1143</td>
+                </tr>
+                <tr>
+                    <td>51</td>
+                    <td>as z</td>
+                    <td>has 3</td>
+                </tr>
+                <tr>
+                    <td>15123</td>
+                    <td>16995</td>
+                    <td>12a76</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>a</td>
+                    <td>in</td>
+                </tr>
+                <tr>
+                    <td>so </td>
+                    <td>1 of </td>
+                    <td>hello </td>
+                </tr>
+                <tr>
+                    <td>my</td>
+                    <td>aaaa</td>
+                    <td>123 </td>
+                </tr>
+                <tr>
+                    <td>hey</td>
+                    <td>come</td>
+                    <td>lp</td>
+                </tr>
+                <tr>
+                    <td>green</td>
+                    <td>day</td>
+                    <td>tea</td>
+                </tr>
+                <tr>
+                    <td>yo</td>
+                    <td>yep</td>
+                    <td>671</td>
+                </tr>
+                <tr>
+                    <td>straigh</td>
+                    <td>from</td>
+                    <td>co915</td>
+                </tr>
+                <tr>
+                    <td>zwe</td>
+                    <td>ooy</td>
+                    <td>6474</td>
+                </tr>
+                <tr>
+                    <td>..ya</td>
+                    <td>yep</td>
+                    <td>rk</td>
+                </tr>
+                <tr>
+                    <td>t768</td>
+                    <td>even</td>
+                    <td>its</td>
+                </tr>
+                <tr>
+                    <td>hq qhg</td>
+                    <td>5543</td>
+                    <td>4041</td>
+                </tr>
+                <tr>
+                    <td>ha ga</td>
+                    <td>lama</td>
+                    <td>kappa</td>
+                </tr>
+                <tr>
+                    <td>ewke</td>
+                    <td>maaz</td>
+                    <td>nan</td>
+                </tr>
+                <tr>
+                    <td>ae ea na</td>
+                    <td>jn aq</td>
+                    <td>kj lk</td>
+                </tr>
+                <tr>
+                    <td>lab</td>
+                    <td>bas nas</td>
+                    <td>katzz</td>
+                </tr>
+                <tr>
+                    <td>zy w</td>
+                    <td>z ewq</td>
+                    <td>qq</td>
+                </tr>
+                <tr>
+                    <td>glgl</td>
+                    <td>ant</td>
+                    <td>ir</td>
+                </tr>
+                <tr>
+                    <td>unnn</td>
+                    <td>nah </td>
+                    <td>aloha</td>
+                </tr>
+                <tr>
+                    <td>cat</td>
+                    <td>jam</td>
+                    <td>911 call</td>
+                </tr>
+                <tr>
+                    <td>101 co</td>
+                    <td>go b </td>
+                    <td>soso </td>
+                </tr>
+                <tr>
+                    <td>aqua</td>
+                    <td>qwe</td>
+                    <td>cxz</td>
+                </tr>
+                <tr>
+                    <td>man</td>
+                    <td>of</td>
+                    <td>war</td>
+                </tr>
+                <tr>
+                    <td>limp</td>
+                    <td>biz</td>
+                    <td>kit</td>
+                </tr>
+                <tr>
+                    <td>pa</td>
+                    <td>pa</td>
+                    <td>roach</td>
+                </tr>
+                <tr>
+                    <td>link</td>
+                    <td>in</td>
+                    <td>park</td>
+                </tr>
+                <tr>
+                    <td>p</td>
+                    <td>o</td>
+                    <td>d</td>
+                </tr>
+                <tr>
+                    <td>dis</td>
+                    <td>tur</td>
+                    <td>bed</td>
+                </tr>
+                <tr>
+                    <td>nick</td>
+                    <td>el</td>
+                    <td>back</td>
+                </tr>
+                <tr>
+                    <td>ac</td>
+                    <td>cdc</td>
+                    <td>dc</td>
+                </tr>
+                <tr>
+                    <td>bad</td>
+                    <td>wo</td>
+                    <td>lfes</td>
+                </tr>
+                <tr>
+                    <td>be</td>
+                    <td>atl</td>
+                    <td>s</td>
+                </tr>
+                <tr>
+                    <td>black</td>
+                    <td>sab</td>
+                    <td>bath</td>
+                </tr>
+                <tr>
+                    <td>oz</td>
+                    <td>zy</td>
+                    <td>oz</td>
+                </tr>
+                <tr>
+                    <td>break</td>
+                    <td>ing</td>
+                    <td>ben</td>
+                </tr>
+                <tr>
+                    <td>three</td>
+                    <td>days</td>
+                    <td>grace</td>
+                </tr>
+                <tr>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>sli</td>
+                    <td>pk</td>
+                    <td>not</td>
+                </tr>
+                <tr>
+                    <td>blue</td>
+                    <td>oc</td>
+                    <td>tober</td>
+                </tr>
+                <tr>
+                    <td>evan</td>
+                    <td>sce</td>
+                    <td>nce</td>
+                </tr>
+                <tr>
+                    <td>aven</td>
+                    <td>ged</td>
+                    <td>saven</td>
+                </tr>
+                <tr>
+                    <td>ski</td>
+                    <td>ll</td>
+                    <td>et</td>
+                </tr>
+                <tr>
+                    <td>system</td>
+                    <td>of a</td>
+                    <td>dows</td>
+                </tr>
+                <tr>
+                    <td>meta</td>
+                    <td>lli</td>
+                    <td>ca</td>
+                </tr>
+                <tr>
+                    <td>limp</td>
+                    <td>biz</td>
+                    <td>kit</td>
+                </tr>
+                <tr>
+                    <td>pa</td>
+                    <td>pa</td>
+                    <td>roach</td>
+                </tr>
+                <tr>
+                    <td>link</td>
+                    <td>in</td>
+                    <td>park</td>
+                </tr>
+                <tr>
+                    <td>p</td>
+                    <td>o</td>
+                    <td>d</td>
+                </tr>
+                <tr>
+                    <td>dis</td>
+                    <td>tur</td>
+                    <td>bed</td>
+                </tr>
+                <tr>
+                    <td>nick</td>
+                    <td>el</td>
+                    <td>back</td>
+                </tr>
+                <tr>
+                    <td>ac</td>
+                    <td>cdc</td>
+                    <td>dc</td>
+                </tr>
+                <tr>
+                    <td>bad</td>
+                    <td>wo</td>
+                    <td>lfes</td>
+                </tr>
+                <tr>
+                    <td>be</td>
+                    <td>atl</td>
+                    <td>s</td>
+                </tr>
+                <tr>
+                    <td>black</td>
+                    <td>sab</td>
+                    <td>bath</td>
+                </tr>
+                <tr>
+                    <td>oz</td>
+                    <td>zy</td>
+                    <td>oz</td>
+                </tr>
+                <tr>
+                    <td>break</td>
+                    <td>ing</td>
+                    <td>benj</td>
+                </tr>
+                <tr>
+                    <td>three</td>
+                    <td>days</td>
+                    <td>grace</td>
+                </tr>
+                <tr>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>sli</td>
+                    <td>pk</td>
+                    <td>not</td>
+                </tr>
+                <tr>
+                    <td>blue</td>
+                    <td>oc</td>
+                    <td>tober</td>
+                </tr>
+                <tr>
+                    <td>evan</td>
+                    <td>sce</td>
+                    <td>nce</td>
+                </tr>
+                <tr>
+                    <td>aven</td>
+                    <td>ged</td>
+                    <td>saven</td>
+                </tr>
+                <tr>
+                    <td>ski</td>
+                    <td>ll</td>
+                    <td>et</td>
+                </tr>
+                <tr>
+                    <td>system</td>
+                    <td>of a</td>
+                    <td>dows</td>
+                </tr>
+                <tr>
+                    <td>meta</td>
+                    <td>lli</td>
+                    <td>ca</td>
+                </tr>
+            </table>
+        </div>
+        <div class="modal">
+            <a class="top_bar_modal" onclick="closeModal()"><i class="fa fa-close"></i></a>
+            <p>Приветствую!</p>
+            <p>Перед вами приложение сортировки.Правила довольно просты:</p>
+            <p>1) каждый из списков сортируется в двух направлениях</p>
+            <p>2) осуществляется поиск элементов по столбцам и по всему списку сразу. Чтобы искать по всему списку не выбирайте столбец для поиска в верхнем меню.</p>
+            <p>3) сброс поиска, столбца для поиска и сортировки осуществляется кнопкой <i class="fa fa-close"></i></p>
+            <p>Спасибо за внимание)</p>
+        </div>
+        <div class="overlay"></div>
+        <div class="navigation">
+            <button class="navigation_btn" onclick="navigation('first')"><i class="fa fa-angle-double-left"></i></button>
+            <button class="navigation_btn" onclick="navigation('prev')"><i class="fa fa-angle-left"></i></button>
+            <a class="current_page"></a>
+            <button class="navigation_btn" onclick="navigation('next')"><i class="fa fa-angle-right"></i></button>
+            <button class="navigation_btn" onclick="navigation('last')"><i class="fa fa-angle-double-right"></i></button>
+        </div>
+    </div>
+</body>
+</html>
