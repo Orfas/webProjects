@@ -1,0 +1,64 @@
+.content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.switch{
+    width: 90vw;
+    margin: 5vh 2vw;
+    border-radius: 8px;
+    border: 2px solid rgb(26, 20, 20);
+    padding: 1vh 1vw;
+}
+.switch input[type=radio] {
+	display: none;
+}
+.switch label {
+	display: inline-block;
+	cursor: pointer;
+	padding: 0px 15px;
+	line-height: 34px;
+	border: 1px solid black;
+	border-radius: 4px;
+    margin: 0 5px;
+}
+.switch label:hover{
+    background-color: white;
+    color: black;
+}
+.switch input[type=radio]:checked + label {
+	background-color: black;
+    color: white;
+}
+.changeBlock{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100vw;
+    margin: 5vh 0;
+}
+.slaiders{
+    width: 30%;
+}
+.slider{
+    margin: 10px 5%;
+    
+}
+.textToSwitch{
+    display: flex;
+    width: 45%;
+    margin: 0 2%;
+    background-color: rgb(255, 255, 255);
+}
+#red .ui-widget-header, #red .ui-state-default{
+    background-color: red;
+}
+#green .ui-widget-header, #green .ui-state-default{
+    background-color: green;
+}
+#blue .ui-widget-header, #blue .ui-state-default{
+    background-color: blue;
+}
+.textToSwitch{
+    border: 2px solid rgb(26, 20, 20);
+    padding: 1%;
+    border-radius: 8px;
+}
