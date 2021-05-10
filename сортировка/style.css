@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background:  linear-gradient(45deg, #cef7bb, #22ad9a);
+    background:  linear-gradient(45deg, #cfcfcf, #5a5a5a);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,16 +73,16 @@ button.info_Btn:focus{
 }
 .radio_Btns label:hover{
     background-color: white;
-    color: #012e03;
+    color: #000000;
 }
 .radio_Btns input[type=radio]:checked + label {
-	background-color: #012e03;
+	background-color: #000000;
     color: white;
 }
 
 
 button.search_Btn{
-    background-color: #f08431;
+    background-color: #000000;
     color: white;
     border-radius: 50%;
     border: 1px solid white;
@@ -91,13 +91,13 @@ button.search_Btn{
 }
 button.search_Btn:hover{
     background-color: white;
-    color: #f08431;
-    border-color: #f08431;
+    color: #000000;
+    border-color: #000000;
 }
 .text_table{
     display: flex;
     justify-content: space-around;
-    background: #ffffff1f;
+    background: #ffffff8f;
     max-height: 500px;
     overflow: auto;
     border-radius: 16px;
@@ -111,9 +111,9 @@ table{
 button.sort{
     cursor: pointer;
     background: none;
-    color: #012e03;
+    color: #000000;
     border-radius: 8px;
-    border: 1px solid #012e03;
+    border: 1px solid #000000;
     padding: 2% 10%;
     outline: 0;
 }
@@ -135,7 +135,7 @@ button.navigation_btn, .current_page{
 }
 button.navigation_btn{
     border-radius: 8px;
-    border: 0px solid #012e03;
+    border: 0px solid #000000;
     outline: 0;
 }
 .modal{
@@ -148,7 +148,7 @@ button.navigation_btn{
     flex-direction: column;
     z-index: 1011;
     background-color: white;
-    color: #012e03;
+    color: #000000;
     padding: 2%;
     border-radius: 16px;
 }
@@ -167,7 +167,7 @@ button.navigation_btn{
     left:0;
     width: 100%;
     height: 100%;
-    background-color: #012e03;
+    background-color: #000000;
     opacity: 0.7;
 }
 
